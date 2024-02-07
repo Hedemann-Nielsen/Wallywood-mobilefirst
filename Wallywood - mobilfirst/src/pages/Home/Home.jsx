@@ -2,7 +2,8 @@
 export const Home = () => {
   return (
 <main>
-    <div>Main component</div>
+    <h3>Tilfældige plakater</h3>
+    
 </main>
   );
 }

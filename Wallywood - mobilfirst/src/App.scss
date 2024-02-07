@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Titillium+Web:wght@200;300;700;900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Open Sans", sans-serif;
+}
+
+header,
+main,
+footer {
+	margin: 0 10px;
+}
+
+h1 {
+	font-family: "Titillium Web", sans-serif;
+	text-align: left;
+	font-weight: 900;
+	font-size: 36px;
+	color: #d97852;
+	text-transform: uppercase;
+}
+@media (min-width: 768px) {
+	h1 {
+		font-size: 54px;
+	}
+}
+
+h2 {
+	color: #d97852;
+	font-family: "Open Sans", sans-serif;
+	&::first-letter {
+		text-transform: uppercase;
+	}
+}
+h3 {
+	font-family: "Open Sans", sans-serif;
+	color: #524641;
+	text-transform: capitalize;
+}
+h5 {
+	font-family: "Titillium Web", sans-serif;
+	font-size: 16px;
+	color: #524641;
+	font-weight: 700;
+}
+p {
+	font-family: "Open Sans", sans-serif;
+	color: #524641;
+}
+
+button {
+	margin: 10px 0;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+	text-align: center;
+	background-color: #d1b3a7;
+	color: #524641;
+	border: 1px solid #524641;
+	border-radius: 3px;
+	padding: 6px 14px;
+	&:hover {
+		background-color: #a68e85;
+		color: #ffffff;
+		border-color: #524641;
+	}
+}

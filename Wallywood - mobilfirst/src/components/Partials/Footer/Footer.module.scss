@@ -1,0 +1,49 @@
+.footer {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	background-color: #f8f8f8;
+	border-top: 2px solid #5c1f06;
+	margin: 0 40px;
+	padding-bottom: 10px;
+
+	.leftSection {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		color: #524641;
+		text-transform: capitalize;
+		.name {
+			font-family: "Titillium Web", sans-serif;
+			font-size: 24px;
+			color: #d97852;
+			text-transform: uppercase;
+		}
+	}
+	.contactInfo p:first-child {
+		padding-top: 18px;
+		text-transform: uppercase;
+	}
+	.contactInfo a {
+		display: block;
+		text-decoration: none;
+		color: #524641;
+		text-transform: lowercase;
+	}
+	.social {
+		position: relative;
+		margin-left: 200px;
+		top: 10px;
+		color: #cccccc;
+		font-size: 28px;
+		width: fit-content;
+	}
+	.social > * {
+		margin: 0 2px;
+		cursor: pointer;
+		&:hover {
+			color: #5c1f06;
+		}
+	}
+}
+p {
+	font-size: 14px;
+}
