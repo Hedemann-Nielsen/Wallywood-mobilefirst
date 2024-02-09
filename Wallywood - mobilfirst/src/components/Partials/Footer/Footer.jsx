@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import style from "./Footer.module.scss";
 
@@ -39,8 +40,8 @@ export const Footer = () => {
           </div>
           <div className={style.contactInfo}>
             <p>cvr: 12345678</p>
-            <a href="mailto:info@plakatshoppen.dk">mail: info@plakatshoppen.dk</a>
-            <a href="tel:+4598123456">mobil: +45 98123456</a>
+            <Link to="mailto:info@plakatshoppen.dk">mail: info@plakatshoppen.dk</Link>
+            <Link to="tel:+4598123456">mobil: +45 98123456</Link>
           </div>
         </div>
         <div className={style.social}>

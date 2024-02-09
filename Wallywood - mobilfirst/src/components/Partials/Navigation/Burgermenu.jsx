@@ -8,7 +8,6 @@ import { IoMenu, IoClose  } from "react-icons/io5";
 export const Burgermenu = () => {
   const [isActive, setIsActive] = useState();
 
-
   return (
       <div className={style.mobilMenu}>
         <div className={style.navbar}>
@@ -26,7 +25,7 @@ export const Burgermenu = () => {
             {MenuData && MenuData.map((item, index) => {
               return (
                 <li key={index} className={style.navText}>
-                  <NavLink to={item.url}>
+                  <NavLink to={item.url} onClick={() => setIsActive(!isActive) }>
                     <span>{item.title}</span>
                   </NavLink>
                 </li>

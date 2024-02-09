@@ -1,8 +1,6 @@
 .navbar {
 	height: 80px;
-	display: flex;
-	justify-content: start;
-	padding: 10px 20px;
+	padding: 15px 0;
 
 	a {
 		margin-left: 2rem;
@@ -25,6 +23,7 @@
 	position: fixed;
 	top: 0;
 	left: -100%;
+	z-index: 100;
 	transition: 850ms;
 	.sidebar {
 		margin: 20px 0;
