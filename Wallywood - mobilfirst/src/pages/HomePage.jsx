@@ -1,10 +1,11 @@
-import { curtain } from "../assets/images/curtain.jpg";
+import curtain from "../assets/images/curtain.jpg";
+import { RandomPosters } from "./Posters/RandomPosters";
 
 export const Home = () => {
   return (
 <main>
-    <img src={curtain} alt="" />
-    
+    <img style={{width: '100%'}} src={curtain} alt="" />
+    <RandomPosters></RandomPosters>
 </main>
   );
 }

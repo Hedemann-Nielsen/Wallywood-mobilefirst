@@ -9,11 +9,14 @@ export const Header = () => {
 
   return (
     <header className={style.header}>
-        <Burgermenu></Burgermenu>
         <NavLink to="/" className={style.link}>
           <h1>Wallywood</h1>
         </NavLink>
+      <div>
+        <Burgermenu></Burgermenu>
         <Desktopmenu></Desktopmenu>
+      </div>
+   
     </header>
     
   )
