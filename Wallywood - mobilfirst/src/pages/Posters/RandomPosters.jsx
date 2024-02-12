@@ -25,7 +25,7 @@ export const RandomPosters = () => {
                 <img src={item.image} alt={item.name} />
                 <figcaption>
                     <h3>{item.name}</h3>
-                    <p>{item.description}</p>
+                    <p dangerouslySetInnerHTML={{ __html: item.description}}></p>
                     <button>læs mere</button>
                 </figcaption>
             </figure>
@@ -33,4 +33,9 @@ export const RandomPosters = () => {
     })}
     </>
     )
+
+    
 }
+
+
+

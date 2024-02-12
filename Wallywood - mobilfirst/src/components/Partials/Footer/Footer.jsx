@@ -34,9 +34,9 @@ export const Footer = () => {
       <footer className={style.footer}>
         <div className={style.leftSection}>
           <div>
-          <h2 className={style.name}>wallywood</h2>
-          <p>{footer.address}</p>
-          <p>{footer.zipcode} {footer.city}</p>
+            <h2 className={style.name}>wallywood</h2>
+            <p>{footer.address}</p>
+            <p>{footer.zipcode} {footer.city}</p>
           </div>
           <div className={style.contactInfo}>
             <p>cvr: 12345678</p>
