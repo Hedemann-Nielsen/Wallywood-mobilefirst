@@ -1,16 +1,20 @@
 import './App.scss'
 import { Header } from "./components/Partials/Header/Header.jsx";
-import { AppRouter } from "./components/AppRouter/AppRouter.jsx"; 
+import { AppRouterMobil } from './components/AppRouter/AppRouterMobil.jsx';
+import { AppRouterDesktop } from './components/AppRouter/AppRouterDesktop.jsx';
 import { Footer } from './components/Partials/Footer/Footer.jsx';
+import "./style/index.css";
 
 function App() {
+  const isMobile = window.innerWidth < 768;
   
 
   return (
     <>
     
     <Header></Header>
-      <AppRouter></AppRouter>
+    {isMobile ? <AppRouterMobil></AppRouterMobil> : <AppRouterDesktop></AppRouterDesktop>}
+      {/* <AppRouter></AppRouter> */}
     <Footer></Footer>
     </>
   )

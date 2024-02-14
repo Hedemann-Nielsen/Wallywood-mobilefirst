@@ -10,9 +10,11 @@ export const Burgermenu = () => {
 
   return (
       <div className={style.mobilMenu}>
-        <div className={style.navbar}>
-            <Link to='#' >
-              <IoMenu className={style.icon} onClick={() => setIsActive(!isActive) } />
+        <div className="h-20 ">
+
+        {/* <div className={style.navbar}> */}
+            <Link to='#' className="text-3xl m-10 p-3" >
+              <IoMenu className="text-[#524641] hover:text-[#d97852]" onClick={() => setIsActive(!isActive) } />
             </Link>      
         </div>
         <nav className={`${style.navMenu} ${isActive && style.active}`}>
