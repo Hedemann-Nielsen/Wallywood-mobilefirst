@@ -1,13 +1,13 @@
-import { MenuData } from "./MenuData.jsx";
+import { MenuDataDesktop } from "./MenuDataDesktop.jsx";
 import { FaShoppingBasket } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import style from "./DesktopMenu.module.scss";
 
 export const Desktopmenu = () => {
   return (
     <div className={style.desktopMenu}>
       <ul>
-        {MenuData && MenuData.map((item, index) => {
+        {MenuDataDesktop && MenuDataDesktop.map((item, index) => {
           return (
             <li key={index} className={style.navText}>
                 <NavLink 
@@ -23,7 +23,10 @@ export const Desktopmenu = () => {
               </li>
             )
           })}
+          <Link to="/cart">
           <FaShoppingBasket className={style.basket} />
+
+          </Link>
       </ul>
     </div>
   )

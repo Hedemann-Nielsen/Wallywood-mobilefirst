@@ -1,13 +1,10 @@
-
-export const MenuData = [
+export const MenuDataMobil = [
     {
         title: 'Home',
         url: '/',
-  
-    },
-    {
+    },    {
         title: 'Plakater',
-        url: '/posters/drama',
+        url: '/posters',
     },   {
         title: 'Om os',
         url: '/about',
@@ -17,5 +14,5 @@ export const MenuData = [
     },   {
         title: 'Login',
         url: '/login',
-    },
+    }
 ]

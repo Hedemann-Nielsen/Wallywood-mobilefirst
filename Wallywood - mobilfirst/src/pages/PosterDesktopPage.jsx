@@ -6,8 +6,8 @@ export const PostersDesktop = () => {
   return (
     <>
       <div className={style.grid} >
-      <GenreNavigation></GenreNavigation>
-      <Outlet></Outlet>
+        <GenreNavigation></GenreNavigation>
+        <Outlet></Outlet>
       </div>
     </>
   )

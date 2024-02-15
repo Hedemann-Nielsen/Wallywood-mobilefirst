@@ -26,19 +26,16 @@ export const Footer = () => {
     }
   };
 
-
-  
-
   return (
     <>
       <footer className={style.footer}>
         <div className={style.leftSection}>
           <div>
-            <h2 className={style.name}>wallywood</h2>
+            <h2 className="text-xl font-bold pt-2">wallywood</h2>
             <p>{footer.address}</p>
             <p>{footer.zipcode} {footer.city}</p>
           </div>
-          <div className={style.contactInfo}>
+          <div>
             <p>cvr: 12345678</p>
             <Link to="mailto:info@plakatshoppen.dk">mail: info@plakatshoppen.dk</Link>
             <Link to="tel:+4598123456">mobil: +45 98123456</Link>

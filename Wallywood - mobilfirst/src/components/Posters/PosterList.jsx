@@ -18,7 +18,6 @@ export const PosterList = () => {
     if (error) {
     console.error(error);
   } else {
-    // console.log(data[0].posters);
     setPosterData(data[0].posters);
   }
 }}
@@ -34,14 +33,13 @@ getData()
       {posterData && posterData.map((item) => {
       return (
         <div key={item.id} className={style.posterList}>
-          <img src={item.image} alt="" />
-          <div>
-          <h3>{item.name}</h3>
-          <p>kr. {item.price.toLocaleString("da-DK", { minimumFractionDigits: 2 })}</p>
           <Link to={item.slug}>
-                      <button>læs mere</button>
+            <img src={item.image} alt={item.name} />
+            <h3 className="text-1xl font-bold">{item.name}</h3>
+            <p>kr. {item.price.toLocaleString("da-DK", { minimumFractionDigits: 2 })}</p>
+            <button className={style.button}>læs mere</button>
           </Link>
-          </div>
+         
         </div>
       )
     })}

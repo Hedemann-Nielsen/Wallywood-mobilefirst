@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useSupabase } from "../../Providers/SupabaseProvider"
 import { NavLink } from "react-router-dom"
-import style from "../../style/GlobalStyle.module.scss"
+import style from "./Posters.module.scss";
 
 export const GenreNavigation = () => {
     const [ getApi, setGetApi ] = useState([])
@@ -28,7 +28,7 @@ export const GenreNavigation = () => {
 
     return (
     <>
-      <ul className={style.gridCars}>
+      <ul className={style.gridList}>
         {getApi && getApi.map(item => {
             return (
                 <li key={item.id}>

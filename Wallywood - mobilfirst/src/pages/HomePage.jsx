@@ -1,10 +1,11 @@
 import curtain from "../assets/images/curtain.jpg";
 import { RandomPosters } from "../components/Posters/RandomPosters";
+import "../style/GlobalStyle.module.scss"
 
 export const Home = () => {
   return (
 <main>
-    <img style={{width: '100%'}} src={curtain} alt="" />
+    <img className="w-full hidden md:block lg:block"  src={curtain} alt="" />
     <RandomPosters></RandomPosters>
 </main>
   );

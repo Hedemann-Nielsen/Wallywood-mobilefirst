@@ -1,4 +1,5 @@
 import './App.scss'
+import { PageWrapper } from './components/Wrapper/PageWrapper.jsx';
 import { Header } from "./components/Partials/Header/Header.jsx";
 import { AppRouterMobil } from './components/AppRouter/AppRouterMobil.jsx';
 import { AppRouterDesktop } from './components/AppRouter/AppRouterDesktop.jsx';
@@ -11,11 +12,12 @@ function App() {
 
   return (
     <>
-    
-    <Header></Header>
-    {isMobile ? <AppRouterMobil></AppRouterMobil> : <AppRouterDesktop></AppRouterDesktop>}
-      {/* <AppRouter></AppRouter> */}
-    <Footer></Footer>
+   <PageWrapper>
+      <Header></Header>
+        {isMobile ? <AppRouterMobil></AppRouterMobil> : <AppRouterDesktop></AppRouterDesktop>}
+      <Footer></Footer>
+   </PageWrapper>
+   
     </>
   )
 }

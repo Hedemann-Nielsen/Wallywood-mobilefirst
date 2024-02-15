@@ -8,14 +8,25 @@
 }
 
 body {
-	display: flex;
-	min-height: 100vh;
+	min-height: 100%;
+	background-color: #f9f9f9;
+}
+
+@media (min-width: 768px) {
+	body {
+		// display: flex;
+	}
+	#root {
+		background-color: #5c1f06;
+		// 	background-color: #f9f9f9;
+	}
 }
 
 header,
 main,
 footer {
 	padding: 0 10px;
+	background-color: #f9f9f9;
 }
 
 h1 {
@@ -26,6 +37,7 @@ h1 {
 h2 {
 	color: #d97852;
 	font-family: "Open Sans", sans-serif;
+
 	&::first-letter {
 		text-transform: uppercase;
 	}
@@ -45,25 +57,6 @@ p {
 	font-family: "Open Sans", sans-serif;
 	color: #524641;
 }
-
-button {
-	margin: 10px;
-	font-size: 16px;
-	font-family: "Open Sans", sans-serif;
-	text-align: center;
-	background-color: #d1b3a7;
-	color: #524641;
-	border: 1px solid #524641;
-	border-radius: 3px;
-	padding: 6px 14px;
-	&:hover {
-		background-color: #a68e85;
-		color: #ffffff;
-		border-color: #524641;
-	}
-}
-
-// input type number viser altid pil op og ned
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {

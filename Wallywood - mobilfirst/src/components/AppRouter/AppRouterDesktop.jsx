@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../../pages/HomePage.jsx";
-import { About } from "../../pages/AboutPage.jsx";
-import { Contact } from "../../pages/ContactPage.jsx";
-import { Login } from "../../pages/LoginPage.jsx";
-import { Fallback } from "../../pages/FallbackPage.jsx";
+import { AboutPage } from "../../pages/AboutPage.jsx";
+import { ContactPage } from "../../pages/ContactPage.jsx";
+import { LoginPage } from "../../pages/LoginPage.jsx";
+import { FallbackPage } from "../../pages/FallbackPage.jsx";
 import { PostersDesktop } from "../../pages/PosterDesktopPage.jsx";
 import { PosterList } from "../Posters/PosterList.jsx";
 import { PosterDetails } from "../Posters/PosterDetails.jsx";
+import { CartPage } from "../../pages/CartPage.jsx";
 
 export const AppRouterDesktop = () => {
     return (
@@ -19,10 +20,11 @@ export const AppRouterDesktop = () => {
                 <Route path=":genreSlug/:posterSlug" element={<PosterDetails />} />
             </Route>
 
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<Fallback />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="*" element={<FallbackPage />} />
 
         </Routes>
     )
