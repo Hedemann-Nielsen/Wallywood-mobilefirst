@@ -6,7 +6,7 @@ import style from "./Posters.module.scss"
 
 export const PosterDetails = () => {
   const { posterSlug } = useParams()
-  const [ poster, setPoster ] = useState()
+  const [ poster, setPoster ] = useState([])
   const { supabase } = useSupabase()
   
   const getData = async () => {
@@ -27,6 +27,16 @@ export const PosterDetails = () => {
   useEffect(() => {
     getData()
   }, [posterSlug, supabase])
+
+  const add2cart = async(data) => {
+    console.log(data);
+  }
+  
+  if(!posterData.id) {
+    return <div>Loader...</div>
+  
+
+  }
   console.log(poster);
   return (
     <>
