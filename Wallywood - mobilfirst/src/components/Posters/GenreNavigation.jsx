@@ -17,6 +17,7 @@ export const GenreNavigation = () => {
       console.errer('fejl i kald', error)
     } else {
       setGetApi(data)
+      console.log(data);
       
     }
   }}

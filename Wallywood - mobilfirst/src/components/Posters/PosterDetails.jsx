@@ -13,43 +13,45 @@ export const PosterDetails = () => {
   
   const getData = async () => {
     if(supabase) {
-    const { data, error } = await supabase
-    .from('posters')
-    .select("*")
-    .eq("slug", posterSlug)
-    .limit(1)
-    .single()
-   if(error) {
-    console.error("fejl i kald", error);
-  } else {
-  
-    setPoster(data)
+        const { data, error } = await supabase
+        .from('posters')
+        .select("*")
+        .eq("slug", posterSlug)
+        .limit(1)
+        .single()
+      if(error) {
+        console.error("fejl i kald", error);
+      } else {
+      
+        setPoster(data)
+      }
+    }
   }
-}}
+
   useEffect(() => {
     getData()
   }, [posterSlug, supabase])
 
   const add2Cart = async formData => {
     if(supabase) {
-      const { data: { session: { user: { id: user_id}}}} = await supabase.auth.getSession()
-      const { data, error } = await supabase
-      .from('cart')
-      .insert([{
-        userid_id: user_id,
-        posterid_id: formData.poster_id,
-        quantity: formData.quantity
-    }])
-    if (error) {
-      console.error(error);
-      
-    } else {
-      console.log('Addede to cart', data);
+        const { data: { session: { user: { id: user_id}}}} = await supabase.auth.getSession()
+        const { data, error } = await supabase
+        .from('cart')
+        .insert([{
+          user_id: user_id,
+          poster_id: formData.poster_id,
+          quantity: formData.quantity
+      }])
+      if (error) {
+        console.error(error);
+        
+      } else {
+        console.log('Addede to cart', data);
+      }
     }
-
-    }
-    console.log(data);
   }
+
+
   return (
     <>
     {poster && poster.id && (

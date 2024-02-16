@@ -14,7 +14,9 @@ export const SupabaseProvider = ({children}) => {
     }, [supabaseKey])
 
   return (
-    <supabaseContext.Provider value={{ supabase }}>{children}</supabaseContext.Provider>
+    <supabaseContext.Provider value={{ supabase }}>
+      {children}
+    </supabaseContext.Provider>
   )
 }
 
